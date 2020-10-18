@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 import Avatar from "components/avatar/avatar.component";
 
@@ -9,10 +9,7 @@ const Header = () => {
     return (
         <div className={styles.wrapper}>
             <Link to="/">Jobs</Link>
-            <Link to="/profile/jowongwrites">Profile</Link>
-            <Link to="/">Company Reviews</Link>
-            <Link to="/">Post Resume</Link>
-            <Link to="/">Resources</Link>
+            <Link to="/profile/jowongwrites">My Profile</Link>
             <Link to="/">Contact Us</Link>
             <Avatar />
         </div>
