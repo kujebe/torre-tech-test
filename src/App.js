@@ -12,7 +12,9 @@ function App() {
     <Layout>
       <Switch>
         <Route exact path="/">
-          <SearchDetailsPage />
+          <SearchDetailsPage
+            apiUrl="https://search.torre.co/opportunities/_search/"
+            size={20} />
         </Route>
         <Route path="/profile">
           <UserProfilePage />
