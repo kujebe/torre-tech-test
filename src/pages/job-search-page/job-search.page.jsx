@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPaginate from 'react-paginate';
 import { Link } from "react-router-dom";
 
@@ -50,12 +50,10 @@ const SearchPage = (props) => {
             {state.loading ? (
                 <Spinner />
             ) : (
-                    <Fragment>
-                        {state.opportunities.map(job => (
-                            <div key={job.id}><Link to={`job/${job.id}`}>{job.objective}</Link></div>
-                        ))}
+                    state.opportunities.map(job => (
+                        <div key={job.id}><Link to={`job/${job.id}`}>{job.objective}</Link></div>
+                    ))
 
-                    </Fragment>
                 )}
             <ReactPaginate
                 previousLabel={'previous'}
