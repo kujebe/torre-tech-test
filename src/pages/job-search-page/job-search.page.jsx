@@ -54,21 +54,22 @@ const SearchPage = (props) => {
                         {state.opportunities.map(job => (
                             <div key={job.id}><Link to={`job/${job.id}`}>{job.objective}</Link></div>
                         ))}
-                        <ReactPaginate
-                            previousLabel={'previous'}
-                            nextLabel={'next'}
-                            breakLabel={'...'}
-                            breakClassName={'break-me'}
-                            pageCount={state.pageCount}
-                            marginPagesDisplayed={2}
-                            pageRangeDisplayed={5}
-                            onPageChange={handlePageClick}
-                            containerClassName={styles.pagination}
-                            subContainerClassName={'pages pagination'}
-                            activeClassName={styles.active}
-                        />
+
                     </Fragment>
                 )}
+            <ReactPaginate
+                previousLabel={'previous'}
+                nextLabel={'next'}
+                breakLabel={'...'}
+                breakClassName={'break-me'}
+                pageCount={state.pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={styles.pagination}
+                subContainerClassName={'pages pagination'}
+                activeClassName={styles.active}
+            />
         </div>
     )
 }
