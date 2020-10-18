@@ -8,7 +8,7 @@ import UserProfilePage from "pages/user-profile-page/user-profile.page.jsx";
 import JobDetailsPage from "pages/job-details-page/job-details.page.jsx";
 
 const SEARCH_API_URL = "https://search.torre.co";
-const BIO_API_URL = " https://torre.bio/api/bios";
+const BIO_API_URL = "https://bio.torre.co/api/bios";
 const JOB_API_URL = "https://torre.co/api/opportunities"
 
 const fetcher = (...args) => fetch(...args).then((response) => response.json());
@@ -28,7 +28,7 @@ function App() {
             <JobDetailsPage
               apiUrl={`${JOB_API_URL}/`} />
           </Route>
-          <Route path="/profile/:id">
+          <Route path="/profile/:username">
             <UserProfilePage
               apiUrl={`${BIO_API_URL}/`} />
           </Route>
