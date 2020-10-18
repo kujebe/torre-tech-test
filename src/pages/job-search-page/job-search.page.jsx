@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import ReactPaginate from 'react-paginate';
+import { Link } from "react-router-dom";
 
 import Spinner from "components/spinner/spinner.component";
 
@@ -49,7 +50,7 @@ const SearchPage = (props) => {
             ) : (
                     <Fragment>
                         {state.opportunities.map(job => (
-                            <div key={job.id}><a href={`job/${job.id}`}>{job.id}</a></div>
+                            <div key={job.id}><Link href={`job/${job.id}`}>{job.objective}</Link></div>
                         ))}
                         <ReactPaginate
                             previousLabel={'previous'}
