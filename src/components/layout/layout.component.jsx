@@ -1,10 +1,17 @@
 import React from "react";
 
+import Sidebar from "components/layout-left/sidebar.component";
+import Header from "components/layout-header/header.component";
+
 import styles from "./layout.module.scss"
 
 const Layout = ({ children }) => (
     <div className={styles.container}>
-        {children}
+        <Sidebar />
+        <div className={styles.main_wrapper}>
+            <Header />
+            {children}
+        </div>
     </div>
 );
 

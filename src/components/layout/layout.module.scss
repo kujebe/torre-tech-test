@@ -1,10 +1,13 @@
 @import "theme/theme.scss";
 
 .container{
-    background: #fff;
+    background: #e5e5e5;
     width: 80%;
-    min-height: 80vh; 
+    min-height: 100vh; 
     margin: 60px auto;
+    display: flex;
     @include box-shadow;
-
+    .main_wrapper{
+        flex-grow: 1;
+    }
 }

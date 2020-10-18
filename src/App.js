@@ -16,7 +16,6 @@ const fetcher = (...args) => fetch(...args).then((response) => response.json());
 function App() {
   return (
     <Layout>
-
       <SWRConfig value={{ fetcher }}>
         <Switch>
           <Route exact path="/">
@@ -28,7 +27,7 @@ function App() {
             <JobDetailsPage
               apiUrl={`${JOB_API_URL}/`} />
           </Route>
-          <Route path="/profile/:username">
+          <Route exact path="/profile/:username">
             <UserProfilePage
               apiUrl={`${BIO_API_URL}/`} />
           </Route>
