@@ -1,5 +1,10 @@
 .wrapper{
     width: 10%;
     background: #fff; 
-    padding: 30px
+    padding: 20px 10px;
+    .logo_wrapper{
+        .logo{
+            width: 80px;
+        }
+    }
 }
