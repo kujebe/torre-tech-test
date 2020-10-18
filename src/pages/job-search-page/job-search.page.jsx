@@ -49,7 +49,7 @@ const SearchPage = (props) => {
             ) : (
                     <Fragment>
                         {state.opportunities.map(job => (
-                            <div key={job.id}><a href={`/job/${job.id}`}>{job.id}</a></div>
+                            <div key={job.id}><a href={`job/${job.id}`}>{job.id}</a></div>
                         ))}
                         <ReactPaginate
                             previousLabel={'previous'}

@@ -11,7 +11,8 @@
     "react-dom": "^16.14.0",
     "react-paginate": "^6.5.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "swr": "^0.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
