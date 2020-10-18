@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import Spinner from "components/spinner/spinner.component";
 
+import styles from "./search-page.module.scss";
+
 const SearchPage = (props) => {
     const [state, setState] = useState({
         opportunities: [],
@@ -61,9 +63,9 @@ const SearchPage = (props) => {
                             marginPagesDisplayed={2}
                             pageRangeDisplayed={5}
                             onPageChange={handlePageClick}
-                            containerClassName={'pagination'}
+                            containerClassName={styles.pagination}
                             subContainerClassName={'pages pagination'}
-                            activeClassName={'active'}
+                            activeClassName={styles.active}
                         />
                     </Fragment>
                 )}

@@ -1,0 +1,22 @@
+@import "theme/theme.scss";
+
+.pagination{
+    display: flex;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    justify-content: center;
+    li{
+        list-style: none; 
+        background: #fff;
+        padding: 8px 14px;
+        margin-right: 6px;
+        cursor: pointer;
+        &.active{
+            background: $theme_blue; 
+            a{
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+    }
+}
