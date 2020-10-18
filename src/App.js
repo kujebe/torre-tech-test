@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Switch, Route } from "react-router-dom";
 
+import Layout from "components/layout/layout.component"
 import SearchDetailsPage from "pages/job-search-page/job-search.page.jsx";
 import UserProfilePage from "pages/user-profile-page/user-profile.page.jsx";
 import JobDetailsPage from "pages/job-details-page/job-details.page.jsx";
@@ -8,7 +9,7 @@ import JobDetailsPage from "pages/job-details-page/job-details.page.jsx";
 
 function App() {
   return (
-    <Fragment>
+    <Layout>
       <Switch>
         <Route exact path="/">
           <SearchDetailsPage />
@@ -20,7 +21,7 @@ function App() {
           <JobDetailsPage />
         </Route>
       </Switch>
-    </Fragment>
+    </Layout>
   );
 }
 

@@ -1,0 +1,10 @@
+@import "theme/theme.scss";
+
+.container{
+    background: #fff;
+    width: 80%;
+    min-height: 80vh; 
+    margin: 60px auto;
+    @include box-shadow;
+
+}
