@@ -1,7 +1,7 @@
 @import "theme/theme.scss";
 
 .container{
-    background: #e5e5e5;
+    background: $grey;
     width: 70%;
     min-height: 100vh; 
     margin: 60px auto;
@@ -9,5 +9,8 @@
     @include box-shadow;
     .main_wrapper{
         flex-grow: 1;
+        .main_content{
+            padding: 40px;
+        }
     }
 }

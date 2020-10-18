@@ -1,0 +1,10 @@
+@import "theme/theme.scss";
+
+.wrapper{
+    width: 100%;
+    background: $theme_blue;
+    padding: 20px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 30px;
+}

@@ -3,6 +3,6 @@
 .wrapper{ 
       img,
       .avatar {
-        @include profile-thumbnail(50px, 50px, rgba(229, 229, 229, 1));
+        @include profile-thumbnail(50px, 50px, $grey);
       }
 } 
