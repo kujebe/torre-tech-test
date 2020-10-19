@@ -1,24 +1,38 @@
 @import "theme/theme.scss";
-
-.pagination{
-    display: flex;
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-    justify-content: center;
-    li{
-        list-style: none; 
-        margin-right: 6px;
-        a{ 
-            background: #fff;
-            padding: 8px 14px;
-            cursor: pointer;
-            outline: none
-        } 
-        &.active{ 
-            a{
-                background: $theme_blue;
-                color: #fff;
-                font-weight: 600;
+.wrapper{
+    .results_wrapper{
+       display: flex;
+       flex-direction: column; 
+       .results_header{
+           display: flex;
+           padding: 20px 0;
+       }
+       .results{
+           display: flex; 
+           width: 100%;
+           flex-wrap: wrap;
+       }
+    }
+    .pagination{
+        display: flex;
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+        justify-content: center;
+        li{
+            list-style: none; 
+            margin-right: 6px;
+            a{ 
+                background: #fff;
+                padding: 8px 14px;
+                cursor: pointer;
+                outline: none
+            } 
+            &.active{ 
+                a{
+                    background: $theme_blue;
+                    color: #fff;
+                    font-weight: 600;
+                }
             }
         }
     }

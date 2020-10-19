@@ -1,6 +1,7 @@
 //Color themes
 $theme_blue: #4fa5d7;
-$grey: rgba(229, 229, 229, 1);
+$grey: #efefef;
+// $grey: rgba(229, 229, 229, 1);
 
 @mixin gradient{
   background: rgb(4,125,197);
@@ -11,23 +12,6 @@ $grey: rgba(229, 229, 229, 1);
 
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0; 
-}
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  min-height: 100vh; 
-  font-size: 15px;
-  @include gradient;
-}
-
-a {
-  text-decoration: none;
-  color: #111010;
-  font-family: "Source Sans Pro", sans-serif;
-} 
 
 @mixin box-shadow { 
   -webkit-box-shadow: 0px 1px 10px rgba(67, 57, 76, 0.50);
@@ -48,3 +32,21 @@ a {
     object-fit: contain;
   }
 }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; 
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh; 
+  font-size: 15px;
+  @include gradient;
+}
+
+a {
+  text-decoration: none;
+  color: #111010;
+  font-family: "Source Sans Pro", sans-serif;
+} 

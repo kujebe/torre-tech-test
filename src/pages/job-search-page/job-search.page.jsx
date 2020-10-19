@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from 'react-paginate';
-import { Link } from "react-router-dom";
 
 import Spinner from "components/spinner/spinner.component";
+import JobCard from "components/job-card/job-card.component"
 
 import styles from "./search-page.module.scss";
 
@@ -46,15 +46,22 @@ const SearchPage = (props) => {
 
 
     return (
-        <div>
+        <div className={styles.wrapper}>
             {state.loading ? (
                 <Spinner />
             ) : (
-                    state.opportunities.map(job => (
-                        <div key={job.id}><Link to={`job/${job.id}`}>{job.objective}</Link></div>
-                    ))
-
-                )}
+                    <div className={styles.results_wrapper}>
+                        <div className={styles.results_header}>
+                            <h4>Open Jobs</h4>
+                        </div>
+                        <div className={styles.results}>
+                            {state.opportunities.map(job => (
+                                <JobCard key={job.id} job={job} />
+                            ))}
+                        </div>
+                    </div>
+                )
+            }
             <ReactPaginate
                 previousLabel={'previous'}
                 nextLabel={'next'}

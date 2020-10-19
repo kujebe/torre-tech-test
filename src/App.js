@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/">
             <SearchDetailsPage
               apiUrl={`${SEARCH_API_URL}/opportunities/_search/`}
-              size={20} />
+              size={21} />
           </Route>
           <Route exact path="/job/:id">
             <JobDetailsPage
