@@ -21,16 +21,19 @@
             }
             .company_name{
                 margin-left: 10px;
-                font-size: 16px;
+                font-size: 17px;
                 font-weight: 700;
                 text-transform: uppercase;
             }
         }
     }
     .bottom{
-        .job_title{
-            // font-weight: 600;
+        .job_title{ 
             color: #6b7073;
+        }
+        .pay{
+            color: $theme_blue;
+            font-weight: 300;
         }
     }
 }
