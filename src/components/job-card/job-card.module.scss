@@ -28,12 +28,25 @@
         }
     }
     .bottom{
+        display: flex;
+        flex-direction: column;
         .job_title{ 
             color: #6b7073;
+            margin-bottom: 5px;
         }
         .pay{
             color: $theme_blue;
             font-weight: 300;
+            margin-bottom: 8px;
+        }
+        .location{
+            display: flex;
+            svg{
+                fill:#6b7073;
+                width: 18px;
+                height: 18px;
+                margin-right: 7px;
+            }
         }
     }
 }
