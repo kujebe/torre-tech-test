@@ -1,13 +1,17 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import corporatePhoto from "assets/images/corporate.png";
 import { ReactComponent as LocationIcon } from "assets/images/location.svg";
+import { ReactComponent as FavoriteIcon } from "assets/images/favorite.svg";
+import Button from "components/button/button.component";
 
 import styles from "./job-card.module.scss";
 
 const JobCard = ({ job }) => {
-    console.log(job)
+
+    const history = useHistory();
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.top}>
@@ -32,6 +36,14 @@ const JobCard = ({ job }) => {
                 <div className={styles.location}>
                     <LocationIcon />
                     <div>{job.locations.length > 0 ? job.locations.join(", ") : "Anywhere"}</div>
+                </div>
+                <div className={styles.actions}>
+                    <Button label="View Details" onClick={() => {
+                        history.push(`job/${job.id}`)
+                    }} />
+                    <div className={styles.favorite}>
+                        <FavoriteIcon />
+                    </div>
                 </div>
             </div>
         </div>
